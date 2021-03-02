@@ -18,6 +18,9 @@ module.exports = {
       main: [
         './src/main.js',
       ],
+      authorization: [
+        './src/authorization/authorization.js',
+      ],
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -33,7 +36,26 @@ module.exports = {
             {
               loader: 'babel-loader',
               options: {
-                presets: ['@babel/preset-env'],
+                // TODO: * add babel.config.js, and remove inline options from here
+                // TODO: **** add 'optional chaining' (elvis operator) plugin and use new syntax
+                presets: [
+                  ['@babel/preset-env',
+                    {
+                      targets: {
+                        browsers: [
+                          '>0.25%',
+                          'not ie 11',
+                          'not op_mini all',
+                        ],
+                      },
+                    },
+                  ],
+                ],
+                plugins: [
+                  ['@babel/plugin-transform-runtime', {
+                    regenerator: true,
+                  }],
+                ],
               },
             },
           ],
@@ -73,6 +95,16 @@ module.exports = {
             ],
             template: 'src/login/login.html',
             filename: 'login/login.html'
+          }
+        ),
+        new HtmlWebpackPlugin(
+          {
+            chunks: [
+                'main',
+                'authorization',
+            ],
+            template: 'src/authorization/authorization.html',
+            filename: 'authorization/authorization.html'
           }
         ),
         new HtmlWebpackPlugin(

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,7 +11,7 @@
         <div class="wrapper">
             <ul class="menu__box">
                 <li class="menu__item">
-                    <a class="menu__link" href="../home/home.html">Главная</a>
+                    <a class="menu__link" href="/">Главная</a>
                 </li>
                 <li class="menu__item">
                     <a class = "menu__link" href="../clients/clients.html">Клиенты</a>
@@ -23,19 +22,37 @@
             </ul>
             <button class="btn" type="button">Выход</button>
         </div>
-    </nav>
-
+    </nav>    
     <div id="client-info">
-        <thead>
-            <tr>
-                <th>Заголовок</th>
-                <th>Директор</th>
-                <th>Возвраст</th>
-                <th>Изображения.</th>
-            </tr>
-        </thead>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Компания</th>
+                    <th>Email</th>
+                    <th>Телефон</th>
+                    <th>Баланс</th>
+                    <th>Дата регистрации</th>
+                </tr>
+            </thead>
+        </table>
     </div>
 
-    <script src="./main.js"></script>
+    <div class="openModal">
+        <div class="modal-dialog">
+            Вы действительно хотите удалить?
+            <div class="modal-btn">
+                <button class="btn-ok">Подтвердить</button>
+                <button class="btn-cancle">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification">
+        <span class="notification__btn"></span>
+        <span class="notification__text">Данные успешно удалены</span>
+    </div>
+    <button class="scroll">
+    </button>
 </body>
 </html>

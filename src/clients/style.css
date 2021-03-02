@@ -47,3 +47,148 @@
     padding: 10px;
     height: 40px;
 }
+
+#client-info {
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+}
+
+#client-info tr.isActive td {
+    background-color: silver;
+}
+
+#client-info td {
+    padding: 0 20px;
+}
+
+.btnDelete {
+    margin: 10px;
+    padding: 5px 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.btnDelete:focus{
+    outline: none;
+
+}
+.btnDelete:hover{
+    background-color: silver;
+    color: #ffffff;
+}
+
+
+
+.openModal {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+}
+
+.openModal.open{
+    display: block;
+}
+
+.modal-dialog {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    padding: 15px;
+    border: 2px solid #0000cc;
+    border-radius: 10px;
+    color: #0000cc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-btn button {
+    border: 2px solid #0000cc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.modal-btn button:focus {
+    outline: none;
+}
+
+.modal-btn button:hover {
+    background-color: #0000cc;
+    color: #ffffff;
+}
+
+.notification {
+    display: none;
+    background-color: #0000ffbd;
+    width: 370px;
+    color: #ffffff;
+    height: 80px;
+    border-radius: 3px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.notification.open {
+    display: block;
+}
+
+.notification__btn {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.notification__btn::before{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 26px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+}
+
+.notification__btn::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 26px;
+    background-color: #ffffff;
+    transform: rotate(-45deg);
+}
+
+.notification__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.scroll {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

@@ -1,14 +1,14 @@
-let user = localStorage.getItem();
+let url = window.location.href;
+let user = localStorage.getItem('userAuthorization');
 
-if(user !== null){
-    let userLocal = JSON.parse(user);
-    if (userLocal.session){
-        document.location.href = "../main/index.html";
+if(user){
+    if(url !== document.location.href){
+        document.location.href = "../home/home.html";
     }
-    else {
-        document.location.href = "../login/index.html";
-    }
-}
+}   
 else{
-    document.location.href = "../login/index.html";
+    if(url == '../login/login.html'){
+       document.location.href = "../login/login.html";
+    }
 }
+

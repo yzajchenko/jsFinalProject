@@ -9,6 +9,7 @@ form.addEventListener('submit', (e)=>{
     if(user !== null){
         let userLocal = JSON.parse(user);
         if (userLocal.password1 === password){
+            localStorage.setItem('userAuthorization', email);
             document.location.href = "../main/index.html";
         }
         else {

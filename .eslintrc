@@ -6,7 +6,12 @@
   },
   "extends": [
     "eslint:recommended",
-    "airbnb"
+    "./config/eslint/eslint-airbnb-override.json",
+    "./config/eslint/eslint-possible-errors-override.json",
+    "./config/eslint/eslint-best-practices-override.json",
+    "./config/eslint/eslint-variables-override.json",
+    "./config/eslint/eslint-stylistic-issues-override.json",
+    "./config/eslint/eslint-ecmascript6-override.json"
   ],
   "parserOptions": {
     "parser": "babel-eslint"
