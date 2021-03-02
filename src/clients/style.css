@@ -52,6 +52,7 @@
     margin-top: 65px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 #client-info tr.isActive td {
@@ -146,6 +147,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
+    z-index: 1000;
 }
 
 .notification.open {
@@ -185,10 +187,30 @@
 }
 
 .scroll {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
+    opacity: 0.4;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    display: none;
+    cursor: pointer;
+    border: 3px solid #BFE2FF;
+    transition: all .7s ease-in-out;
+    background-color: #0000ff;
+    color: white;
+    font-size: 35px;
+}
+
+.scroll.active {
+    display: block;
+}
+
+.scroll:focus{
+    outline: none;
+}
+
+.scroll:hover{
+    opacity: 1;
 }

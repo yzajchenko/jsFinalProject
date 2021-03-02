@@ -9,15 +9,40 @@ menuItem.forEach((item)=>{
     }
 })
 
+function scroll(){
+    let scroll = document.querySelector('.scroll');
+    
+    scroll.classList.add('active'); 
+    scroll.addEventListener('click', ()=>{
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    })
+}
+
+
+let info = document.querySelector('#client-info');
 let clientInfo = document.querySelector('#client-info table');
 
-
-async function getClien(url){
+async function getClien(url, calback){
     let response = await fetch(url);
     let clients =  await response.json();
+    let male = 0;
+    let famale = 0;
+    let maxBalance = '$0';
 
     let tbody = document.createElement('tbody');
             clients.map((items) => {
+
+                if(items.gender === 'male'){
+                    male++;
+                }
+                else{
+                    famale++;
+                }
+
+                if(items.balance > maxBalance){
+                    maxBalance = items.balance;
+                }
+
                 let tr = document.createElement('tr');
                 const name = document.createElement('td');
                 const company = document.createElement('td');
@@ -42,9 +67,11 @@ async function getClien(url){
                 tr.append(name, company, email, phone, balance, registered, btnDelete);
                 tbody.append(tr);
             })
-    clientInfo.append(tbody); 
+    clientInfo.append(tbody);
+    info.prepend(`Количество мужчин: ${male}   Количество женчин: ${famale}  Наибольший баланс: ${maxBalance}`);
+    calback();
 }
-getClien(url);
+getClien(url,scroll);
 
 
 let btn = document.querySelector('#client-info');
@@ -78,6 +105,3 @@ function modalClose(){
 notificationBtn.addEventListener('click',()=>{
     notification.classList.remove('open');
 })
-
-
-
