@@ -46,6 +46,13 @@
 .btn {
     padding: 10px;
     height: 40px;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.btn:focus{
+    outline: none;
 }
 
 #map {

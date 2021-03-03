@@ -73,6 +73,7 @@ module.exports = {
                 'main',
                 'home',
             ],
+            inject: "head",
             template: 'src/home/home.html',
             filename: 'home/home.html'
           }
@@ -83,6 +84,7 @@ module.exports = {
                 'main',
                 'clients',
             ],
+            inject: "head",
             template: 'src/clients/clients.html',
             filename: 'clients/clients.html'
           }
@@ -93,6 +95,7 @@ module.exports = {
                 'main',
                 'login',
             ],
+            inject: "head",
             template: 'src/login/login.html',
             filename: 'login/login.html'
           }
@@ -103,6 +106,7 @@ module.exports = {
                 'main',
                 'authorization',
             ],
+            inject: "head",
             template: 'src/authorization/authorization.html',
             filename: 'authorization/authorization.html'
           }
@@ -113,6 +117,7 @@ module.exports = {
                 'main',
                 'map',
             ],
+            inject: "head",
             template: 'src/map/map.html',
             filename: 'map/map.html'
           }
