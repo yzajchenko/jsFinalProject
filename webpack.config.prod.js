@@ -8,5 +8,8 @@ module.exports = merge(baseConfig, {
   devtool: false,
   plugins: [
     new CleanWebpackPlugin(),
+    require('cssnano')({
+      preset: 'default',
+    }),
   ],
 });
