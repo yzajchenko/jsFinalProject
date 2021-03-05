@@ -1,13 +1,28 @@
+$red: #ff0000;
+
 form {
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  margin: 0 auto;
-  align-items: flex-end;
-}
+  margin: 0 auto 20px;
+  align-items: center;
+  
+  label {
+    height: 60px;
+    width: 300px;
+    text-align: center;
 
-form label {
-  margin-bottom: 25px;
+    span {
+      width: 100px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .error {
+      font-size: 14px;
+      color: $red;
+    }
+  }
 }
 
 .authorization {
