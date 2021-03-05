@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Клиенты</title>
+<script type="text/javascript" src="../clients/clients.js"></script><script type="text/javascript" src="../main.js"></script></head>
+<body>
+    <nav class="menu">
+        <div class="wrapper">
+            <ul class="menu__box">
+                <li class="menu__item">
+                    <a class="menu__link" href="../home/home.html">Главная</a>
+                </li>
+                <li class="menu__item">
+                    <a class = "menu__link" href="../clients/clients.html">Клиенты</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="../map/map.html">Карта</a>
+                </li>
+            </ul>
+            <button class="btn" type="button">Выход</button>
+        </div>
+    </nav>    
+    <div class="client-info">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Компания</th>
+                    <th>Email</th>
+                    <th>Телефон</th>
+                    <th>Баланс</th>
+                    <th>Дата регистрации</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="open-modal">
+        <div class="modal-dialog">
+            Вы действительно хотите удалить?
+            <div class="modal-btn">
+                <button class="btn-ok">Подтвердить</button>
+                <button class="btn-cancle">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification">
+        <span class="notification__btn"></span>
+        <span class="notification__text">Данные успешно удалены</span>
+    </div>
+    <input type="button" value="&#9650;" class="scroll">
+</body>
+</html>
