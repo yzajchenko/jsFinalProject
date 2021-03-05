@@ -1,12 +1,12 @@
-var static = require('node-static');
-let port = 8080;
+const express = require("express");
+const port = 8080;
 
-var file = new static.Server('./dist/home/home.html');
+const app = express();
  
-require('http').createServer(function (request, response) {
-    request.addListener('end', function () {
-        file.serve(request, response);
-    }).resume();
-}).listen(port, () => { 
-  console.log('Server started on port' + port);
+app.use("/", express.static(__dirname + "/dist"));
+
+app.use("/", function(request, response){
+    response.sendFile(__dirname + "/dist/home/home.html");
 });
+ 
+app.listen(port);

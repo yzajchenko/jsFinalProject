@@ -5,7 +5,8 @@
     "build": "webpack --config webpack.config.prod.js",
     "lint:es": "eslint .",
     "lint:scss": "sass-lint --verbose --no-exit",
-    "dev": "webpack serve  --open --config webpack.config.dev.js"
+    "dev": "webpack serve  --open --config webpack.config.dev.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.11.1",
     "detect.js": "^2.2.3",
+    "express": "^4.17.1",
     "node-static": "^0.7.11",
     "ua-parser-js": "^0.7.24",
     "useragent-parser-js": "^1.0.3"
